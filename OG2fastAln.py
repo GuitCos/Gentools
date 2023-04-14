@@ -328,8 +328,7 @@ def TransXAlign(dirname, aaOGPAth, AbrevList):
 						XX = SeqIO.parse(OpFile, 'fasta')
 						for seq in XX:  # Check stop codons to record them in output text file as theywill need to get removed for phylip conversion
 							if len(seq.seq) % 3 != 0:
-								print("WARNING :: Sequence {0}, in file {1}, has a length that's not a multiple of 3 !".format(
-									str(Newfile, seq.id)))
+								print("WARNING :: Sequence {0}, in file {1}, has a length that's not a multiple of 3 !".format(str(Newfile, seq.id)))
 								continue
 							else:
 								n = len(seq.seq)
